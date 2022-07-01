@@ -1,0 +1,16 @@
+###
+GET http://localhost:4000/api/customers
+
+###
+POST http://localhost:4000/api/customers
+Content-Type: application/json
+
+{
+    "name": "Maira"
+}
+
+###
+PUT http://localhost:4000/api/customers
+
+###
+DELETE http://localhost:4000/api/customers
