@@ -7,19 +7,29 @@ customerController.getAllCustomers = async (req, res) => {
     res.json(customers)
     // res.send('customers')
 }
-customerController.createCustomer = (req, res) => {
-    console.log(req.body)
+customerController.createCustomer =  async (req, res) => {
+    
     const newCustomer = new Customer(req.body)
-    res.send('created customer')
+    console.log(newCustomer)
+    await newCustomer.save()
+    res.send({message: 'Customer created'})
 }
 
 
-customerController.getOneCustomer = (req, res) => {
-   
-    res.send('get customers')
+customerController.getOneCustomer = async (req, res) => {
+    // console.log(req.params)
+    const customer = await Customer.findById(req.params.id)
+    res.send(customer)
 }
 
-customerController.editCustomer = (req, res) => {}
-customerController.deleteCustomer = (req, res) => {}
+customerController.editCustomer = async (req, res) => {
+  await Customer.findByIdAndUpdate(req.params.id, req.body)
+  res.json({status: "Customer Updated"})
+}
+customerController.deleteCustomer = async (req, res) => {
+    await Customer.findByIdAndDelete(req.params.id)
+    res.json({status: 'Customer Deleted'})
+     
+}
 
 module.exports = customerController;
