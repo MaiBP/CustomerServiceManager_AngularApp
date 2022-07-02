@@ -6,11 +6,24 @@ POST http://localhost:4000/api/customers
 Content-Type: application/json
 
 {
-    "name": "Maira"
+    "name": "Ervin",
+    "lastName": "Howell",
+    "phoneNumber" : 1511552222,
+    "email": "Shanna@melissa.tv"
 }
 
 ###
-PUT http://localhost:4000/api/customers
+GET http://localhost:4000/api/customers/62c03a82ad866bf1a340d84f
 
 ###
-DELETE http://localhost:4000/api/customers
+PUT http://localhost:4000/api/customers/62c03b87cc68b0d85f5a31fe
+Content-Type: application/json
+
+{
+
+    "phoneNumber": 151234567
+    
+}
+
+###
+DELETE http://localhost:4000/api/customers/62c03a82ad866bf1a340d84f

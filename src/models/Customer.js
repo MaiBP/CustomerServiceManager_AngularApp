@@ -13,6 +13,4 @@ const customerSchema = new Schema({
     verionKey: false
 })
 
-module.export = model('Customer', customerSchema);
-
-// CustomerServiceManager_AngularApp  Customer Service Manager toolCustomer Service Manager tool
+module.exports = model('Customer', customerSchema);
