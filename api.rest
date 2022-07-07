@@ -6,17 +6,18 @@ POST http://localhost:4000/api/customers
 Content-Type: application/json
 
 {
-    "name": "Ervin",
-    "lastName": "Howell",
-    "phoneNumber" : 1511552222,
-    "email": "Shanna@melissa.tv"
+    "name": "Jose",
+    "lastName": "Lopez",
+    "phoneNumber" : 15111234554,
+    "email": "jose@gmail.com",
+    "inquiry": "reclamo"
 }
 
 ###
-GET http://localhost:4000/api/customers/62c03a82ad866bf1a340d84f
+GET http://localhost:4000/api/customers/62c6ffc6d61584b72626b234
 
 ###
-PUT http://localhost:4000/api/customers/62c03b87cc68b0d85f5a31fe
+PUT http://localhost:4000/api/customers/62c6ffc6d61584b72626b234
 Content-Type: application/json
 
 {

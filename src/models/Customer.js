@@ -6,7 +6,7 @@ const customerSchema = new Schema({
     lastName:{type: String, required: true},
     phoneNumber:{type: Number, required: true},
     email:{type: String, required: false},
-    // typeOfInquery: {type: String, required: true}
+    inquiry: {type: String, required: true}
 },
 {
     timestamps: true,
